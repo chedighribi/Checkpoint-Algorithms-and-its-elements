@@ -1,0 +1,29 @@
+ALGORITHM checkpoint
+VAR
+l, w, v : INTEGER;
+str : STRING;
+begin 
+l:=0
+w:=1
+V:=0
+write ('type a sentence that ends with a point')
+read (str)
+
+    repeat
+            if (str[l] = ' ') then 
+            w:=w+1;
+            l:=l+1;
+            else if (str[l] = 'e' or str[l] = 'i' or str[l] = 'a' or str[l] = 'u') then 
+            v:=v+1;
+            l:=l+1;
+            else 
+            l:=l+1;
+            end if 
+    until (str[l]='.')
+
+writeln ('The number of characters is', l );
+writeln ('The number of words in the sentence is', w );
+writeln ('The number of vowels in the sentence is', v );
+
+end
+
